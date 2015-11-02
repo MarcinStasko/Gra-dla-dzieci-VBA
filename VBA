@@ -1,0 +1,102 @@
+Sub gra()
+ 'Pierwszy warunek
+Ans = MsgBox("Wolisz grać w piłkę (Tak) Wolisz Grać na komputerze (nie)", vbYesNo)
+
+If Ans = vbYes Then GoTo 1
+If Ans = vbNo Then GoTo 4
+
+'Warunki logiczne
+
+1:
+Ans = MsgBox("Które zdanie lepiej opisuje twój pokój Wzorowy porzątek (Tak) Artystyczny nieład (nie)", vbYesNo)
+
+If Ans = vbYes Then GoTo 2
+If Ans = vbNo Then GoTo 5
+
+2:
+Ans = MsgBox("Żeby umieścić wysoko coś ciężkiego potrzeba Dzwigu (Tak) Drabiny (nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 3
+    If Ans = vbNo Then GoTo 6
+
+3:
+Ans = MsgBox("Zbędny gruz wywiózłbyś ciężarówką (Tak) taczką (nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 24
+    If Ans = vbNo Then GoTo 7
+
+4: 'klocki
+Ans = MsgBox("Czy lubisz konstruować budowle z klocków", vbYesNo)
+    If Ans = vbYes Then GoTo 5
+    If Ans = vbNo Then GoTo 8
+5:
+Ans = MsgBox("Czy bawisz się samochodami czasem (nie) często (tak)", vbYesNo)
+    If Ans = vbYes Then GoTo 9
+    If Ans = vbNo Then GoTo 6
+6:
+Ans = MsgBox("Kiedy się nudzisz organizujesz wyścig(tak) budujesz robota(nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 7
+    If Ans = vbNo Then GoTo 10
+
+7:
+Ans = MsgBox("Najciekawsze na budowie są maszyny(tak) porządne zadania(nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 23 'wynik
+    If Ans = vbNo Then GoTo 22  'wynik
+
+8:
+Ans = MsgBox("Czy wiesz jak wygląda plac budowy? byłem na takim placu (tak) widziałem w książkach i w TV(nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 9
+    If Ans = vbNo Then GoTo 12
+
+9:
+Ans = MsgBox("Czy boisz się wysokości", vbYesNo)
+    If Ans = vbYes Then GoTo 10
+    If Ans = vbNo Then GoTo 13
+
+10:
+Ans = MsgBox("Kto jest Twoim idolem pisarz(tak) piłkarz(nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 14
+    If Ans = vbNo Then GoTo 11
+
+11:
+Ans = MsgBox("Na budowie jest Cicho(tak) Głośno (nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 23 'wynik
+    If Ans = vbNo Then GoTo 15
+
+12:
+Ans = MsgBox("Niewielką dziurę można wykopać łopatą(tak) wiadrem (nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 13
+    If Ans = vbNo Then GoTo 9
+
+13:
+Ans = MsgBox("Czy lubisz rysować", vbYesNo)
+    If Ans = vbYes Then GoTo 14
+    If Ans = vbNo Then GoTo 10
+
+14:
+Ans = MsgBox("Projekt budowlany jest niezbędny(tak) przydatny(nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 15
+    If Ans = vbNo Then GoTo 11
+
+15:
+Ans = MsgBox("Popsuty parasol... należy wyrzucić(tak) można przerobić na latawiec(nie)", vbYesNo)
+    If Ans = vbYes Then GoTo 21 'wynik
+    If Ans = vbNo Then GoTo 22 'wynik
+
+' Wyniki
+
+21:
+  MsgBox ("Twój żywioł to projektowanie. Będziesz wspaniałym architektem. Możesz projektować domy i wielkie biorowce, wtedy dasz upust swojej fantazji. Powodzenia!")
+  Exit Sub
+
+22:
+  MsgBox ("Będziesz klasycznym Majster klepką - mistrzem każdej budowy. Twoja pomysłowość nie ma granic. Wszyscy Cie bardzo lubią bo jesteś uczynny i pomocny. Tak trzymać! ")
+  Exit Sub
+
+23:
+  MsgBox ("Wielkie maszyny i szybkie pojazdy są stworzone dla Ciebie. Sprawdzisz się doskonale jako kierowca ciężarówki czy operator dźwigu. Jeżeli wybrałeś odpowiedź Cicho to znaczy że będziesz pracować w słuchawkach")
+  Exit Sub
+
+24:
+  MsgBox ("Temat budownictwa nie będzie miał przed Tobą żadnych tajemnic. Będziesz świetnym kierownikiem budowy. Dobrze wież, że wspólnie z pozostałymi kolegami stanowicie doskonałą ekipę")
+  Exit Sub
+  End Sub
+
